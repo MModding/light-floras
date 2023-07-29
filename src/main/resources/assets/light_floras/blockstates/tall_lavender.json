@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "light_floras:block/tall_lavender_bottom"
+    },
+    "half=upper": {
+      "model": "light_floras:block/tall_lavender_top"
+    }
+  }
+}

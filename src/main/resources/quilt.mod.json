@@ -1,0 +1,44 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "fr.firstmegagame4",
+		"id": "light_floras",
+		"version": "${version}",
+		"metadata": {
+			"name": "Light Floras",
+			"description": "The Official Quilt Version of the Light Floras Decorative Mod.",
+			"contributors": {
+				"Silent Winds Team": "Author, Owner",
+				"Aethyus": "Game Designer",
+				"FirstMegaGame4": "Lead Quilt Developer",
+				"Aeramisu": "Artist"
+			},
+			"contact": {
+				"homepage": "https://modrinth/mod/quilted-light-floras",
+				"issues": "https://github.com/Silent-Winds/Light-Floras-Quilt/issues",
+				"sources": "https://github.com/Silent-Winds/Light-Floras-Quilt"
+			},
+			"icon": "assets/light_floras/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "fr.firstmegagame4.lightfloras.LightFloras",
+			"client_init": "fr.firstmegagame4.lightfloras.client.LightFlorasClient"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.0-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=4.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.19.2"
+			}
+		]
+	},
+	"mixin": "light_floras.mixins.json"
+}

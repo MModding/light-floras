@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "light_floras:block/tall_lavender_bottom"
+  }
+}
