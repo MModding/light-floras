@@ -75,8 +75,8 @@ public class LightFlorasFlowers {
 	private static void registerFlower(String path, Block flower, DyeColor dye, int count) {
 		Identifier identifier = LightFloras.createId(path);
 
-		Registry.register(Registry.BLOCK, path, flower);
-		Registry.register(Registry.ITEM, path, new BlockItem(flower, new QuiltItemSettings().group(LightFloras.LIGHT_FLORAS_FLOWERS)));
+		Registry.register(Registry.BLOCK, identifier, flower);
+		Registry.register(Registry.ITEM, identifier, new BlockItem(flower, new QuiltItemSettings().group(LightFloras.LIGHT_FLORAS_FLOWERS)));
 
 		LightFlorasFlowers.IDENTIFIERS.put(identifier, new ItemStack(DyeItem.byColor(dye), count));
 	}

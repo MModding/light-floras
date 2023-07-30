@@ -66,6 +66,6 @@ public class LightFlorasGeneration {
 		DefaultBiomeFeatures.addPlainsFeatures(generationSettings);
 		DefaultBiomeFeatures.addDefaultMushrooms(generationSettings);
 		DefaultBiomeFeatures.addDefaultVegetation(generationSettings);
-		return LightFlorasGeneration.createBiome(Biome.Precipitation.RAIN, 0.7f, 0.4F, 11354869, 9551193, spawnSettings, generationSettings, null);
+		return LightFlorasGeneration.createBiome(Biome.Precipitation.RAIN, 0.7f, 0.4F, 12080634, 8631699, spawnSettings, generationSettings, null);
 	}
 }
