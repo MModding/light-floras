@@ -23,7 +23,8 @@
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
 			"init": "fr.firstmegagame4.lightfloras.LightFloras",
-			"client_init": "fr.firstmegagame4.lightfloras.client.LightFlorasClient"
+			"client_init": "fr.firstmegagame4.lightfloras.client.LightFlorasClient",
+			"terrablender": "fr.firstmegagame4.lightfloras.client.terrablender.LightFlorasTerraBlender"
 		},
 		"depends": [
 			{
@@ -37,6 +38,10 @@
 			{
 				"id": "minecraft",
 				"versions": ">=1.19.2"
+			},
+			{
+				"id": "terrablender",
+				"versions": ">=2.0.1.166-"
 			}
 		]
 	},

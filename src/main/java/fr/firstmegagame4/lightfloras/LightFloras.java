@@ -19,7 +19,8 @@ public class LightFloras implements ModInitializer {
 	public void onInitialize(ModContainer mod) {
 		LightFlorasFlowers.register();
 		LightFlorasFlowers.recipes();
-		LightFlorasFlowers.features();
+		LightFlorasGeneration.biomes();
+		LightFlorasGeneration.features();
 	}
 
 	public static String id() {

@@ -64,8 +64,6 @@ public class LightFlorasFlowers {
 		LightFlorasFlowers.IDENTIFIERS.forEach((identifier, ignored) -> BlockRenderLayerMap.put(RenderLayer.getCutout(), Registry.BLOCK.get(identifier)));
 	}
 
-	public static void features() {}
-
 	private static void registerSmallFlower(String path, DyeColor dye) {
 		LightFlorasFlowers.registerFlower(path, new FlowerBlock(StatusEffects.SATURATION, 7, QuiltBlockSettings.copyOf(Blocks.ALLIUM)), dye, 1);
 	}
