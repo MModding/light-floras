@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "light_floras:block/orange_chrysanthemums"
+    "cross": "light_floras:block/red_chrysanthemums"
   }
 }

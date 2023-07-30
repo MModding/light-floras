@@ -21,6 +21,6 @@ public class LightFlorasRegion extends Region {
 
 	@Override
 	public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
-		this.addBiomeSimilar(mapper, BiomeKeys.PLAINS, LightFlorasGeneration.LAVENDER_PLAINS);
+		this.addBiomeSimilar(mapper, BiomeKeys.MEADOW, LightFlorasGeneration.LAVENDER_MEADOW);
 	}
 }
