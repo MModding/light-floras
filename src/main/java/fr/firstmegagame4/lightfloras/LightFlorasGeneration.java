@@ -1,5 +1,7 @@
 package fr.firstmegagame4.lightfloras;
 
+import com.mmodding.mmodding_lib.library.initializers.ElementsInitializer;
+import com.mmodding.mmodding_lib.library.worldgen.features.defaults.CustomFlowerFeature;
 import fr.firstmegagame4.lightfloras.mixin.OverworldBiomeCreatorAccessor;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -15,13 +17,32 @@ import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import org.jetbrains.annotations.Nullable;
 
-public class LightFlorasGeneration {
+public class LightFlorasGeneration implements ElementsInitializer {
 
 	public static final RegistryKey<Biome> LAVENDER_MEADOW = RegistryKey.of(Registry.BIOME_KEY, LightFloras.createId("lavender_meadow"));
 
-	public static void features() {}
+	@Override
+	public void register() {
+		this.features();
+		this.biomes();
+	}
 
-	public static void biomes() {
+	public void features() {
+		if (LightFloras.staticConfig.getBoolean(LightFlorasFlowers.Region.EUROPE.getParameter())) {
+			CustomFlowerFeature lavenderFeature = new CustomFlowerFeature(
+				96,
+				9,
+				2,
+				LightFlorasFlowers.SHORT_LAVENDER,
+				LightFlorasFlowers.LAVENDER,
+				LightFlorasFlowers.TALL_LAVENDER
+			).setCount(5);
+			lavenderFeature.register(LightFloras.createId("lavender"));
+			lavenderFeature.addDefaultToBiomes(ctx -> ctx.getBiomeKey().equals(LightFlorasGeneration.LAVENDER_MEADOW));
+		}
+	}
+
+	public void biomes() {
 		Registry.register(BuiltinRegistries.BIOME, LAVENDER_MEADOW, BiomeCreator.lavenderMeadow());
 	}
 

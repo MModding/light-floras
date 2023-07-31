@@ -1,0 +1,9 @@
+{
+  "config.light_floras.loadNorthAmericaRegion": "Load North America Region",
+  "config.light_floras.loadSouthAmericaRegion": "Load South America Region",
+  "config.light_floras.loadEuropeRegion": "Load Europe Region",
+  "config.light_floras.loadNorthAfricaRegion": "Load North Africa Region",
+  "config.light_floras.loadSouthAfricaRegion": "Load South Africa Region",
+  "config.light_floras.loadAsiaRegion": "Load Asia Region",
+  "config.light_floras.loadOceaniaRegion": "Load Oceania Region"
+}

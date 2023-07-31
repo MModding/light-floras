@@ -40,6 +40,10 @@
 				"versions": ">=1.19.2"
 			},
 			{
+				"id": "mmodding_lib",
+				"versions": ">=0.1.0-"
+			},
+			{
 				"id": "terrablender",
 				"versions": ">=2.0.1.166-"
 			}
