@@ -1,1 +1,1 @@
-# Light Floras (Quilted Edition)
+# Light Floras
