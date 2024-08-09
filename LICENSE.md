@@ -1,4 +1,4 @@
-### License for Archeon Past, Current and Future Assets:
+### License for Light Floras Past, Current and Future Assets:
 
 ```
 Copyright (c) 2023 Silent Wind's Team
