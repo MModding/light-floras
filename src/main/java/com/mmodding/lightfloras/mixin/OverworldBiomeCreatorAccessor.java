@@ -1,4 +1,4 @@
-package fr.firstmegagame4.lightfloras.mixin;
+package com.mmodding.lightfloras.mixin;
 
 import net.minecraft.world.biome.OverworldBiomeCreator;
 import org.spongepowered.asm.mixin.Mixin;

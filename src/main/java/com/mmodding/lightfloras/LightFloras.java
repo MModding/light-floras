@@ -1,5 +1,6 @@
-package fr.firstmegagame4.lightfloras;
+package com.mmodding.lightfloras;
 
+import com.mmodding.mmodding_lib.library.base.AdvancedModContainer;
 import com.mmodding.mmodding_lib.library.base.MModdingModInitializer;
 import com.mmodding.mmodding_lib.library.config.Config;
 import com.mmodding.mmodding_lib.library.config.ConfigObject;
@@ -8,7 +9,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
-import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.item.group.api.QuiltItemGroup;
 
 import java.util.ArrayList;
@@ -21,12 +21,12 @@ public class LightFloras implements MModdingModInitializer {
 		() -> new ItemStack(LightFlorasFlowers.SHORT_LAVENDER)
 	);
 
-	public static final ConfigObject staticConfig;
+	public static final ConfigObject STATIC_CONFIG;
 
 	static {
 		Config config = new LightFlorasConfig();
 		config.initializeConfig();
-		staticConfig = config.getContent().copy();
+		STATIC_CONFIG = config.getContent().copy();
 	}
 
 	@Nullable
@@ -44,8 +44,10 @@ public class LightFloras implements MModdingModInitializer {
 	}
 
 	@Override
-	public void onInitialize(ModContainer mod) {
-		MModdingModInitializer.super.onInitialize(mod);
+	public void onInitialize(AdvancedModContainer mod) {}
+
+	public static boolean isRegionLoaded(LightFlorasFlowers.Region region) {
+		return LightFloras.STATIC_CONFIG.getBoolean(region.getParameter());
 	}
 
 	public static String id() {

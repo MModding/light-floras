@@ -1,6 +1,8 @@
-package fr.firstmegagame4.lightfloras;
+package com.mmodding.lightfloras;
 
+import com.mmodding.mmodding_lib.library.blocks.settings.AdvancedBlockSettings;
 import com.mmodding.mmodding_lib.library.initializers.ElementsInitializer;
+import com.mmodding.mmodding_lib.library.items.settings.AdvancedItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FlowerBlock;
@@ -12,8 +14,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
-import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 import org.quiltmc.qsl.recipe.api.RecipeManagerHelper;
 import org.quiltmc.qsl.recipe.api.builder.VanillaRecipeBuilders;
 
@@ -62,16 +62,16 @@ public class LightFlorasFlowers implements ElementsInitializer {
 	}
 
 	private static Block registerSmallFlower(String path, DyeColor dye, Region region) {
-		if (LightFloras.staticConfig.getBoolean(region.getParameter())) {
-			return LightFlorasFlowers.registerFlower(path, new FlowerBlock(StatusEffects.SATURATION, 7, QuiltBlockSettings.copyOf(Blocks.ALLIUM)), dye, 1);
+		if (LightFloras.STATIC_CONFIG.getBoolean(region.getParameter())) {
+			return LightFlorasFlowers.registerFlower(path, new FlowerBlock(StatusEffects.SATURATION, 7, AdvancedBlockSettings.copyOf(Blocks.ALLIUM)), dye, 1);
 		} else {
 			return null;
 		}
 	}
 
 	private static Block registerTallFlower(String path, DyeColor dye, Region region) {
-		if (LightFloras.staticConfig.getBoolean(region.getParameter())) {
-			return LightFlorasFlowers.registerFlower(path, new TallFlowerBlock(QuiltBlockSettings.copyOf(Blocks.LILAC)), dye, 2);
+		if (LightFloras.STATIC_CONFIG.getBoolean(region.getParameter())) {
+			return LightFlorasFlowers.registerFlower(path, new TallFlowerBlock(AdvancedBlockSettings.copyOf(Blocks.LILAC)), dye, 2);
 		} else {
 			return null;
 		}
@@ -82,7 +82,7 @@ public class LightFlorasFlowers implements ElementsInitializer {
 		Identifier identifier = LightFloras.createId(path);
 
 		Block registeredFlower = Registry.register(Registry.BLOCK, identifier, flower);
-		Registry.register(Registry.ITEM, identifier, new BlockItem(flower, new QuiltItemSettings().group(LightFloras.LIGHT_FLORAS_FLOWERS)));
+		Registry.register(Registry.ITEM, identifier, new BlockItem(flower, new AdvancedItemSettings().group(LightFloras.LIGHT_FLORAS_FLOWERS)));
 
 		LightFlorasFlowers.IDENTIFIERS.put(identifier, new ItemStack(DyeItem.byColor(dye), count));
 

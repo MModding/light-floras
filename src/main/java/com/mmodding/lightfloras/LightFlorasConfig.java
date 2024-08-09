@@ -1,9 +1,9 @@
-package fr.firstmegagame4.lightfloras;
+package com.mmodding.lightfloras;
 
 import com.mmodding.mmodding_lib.library.config.Config;
 import com.mmodding.mmodding_lib.library.config.ConfigObject;
-import com.mmodding.mmodding_lib.library.config.client.screen.ConfigScreen;
-import com.mmodding.mmodding_lib.library.config.client.screen.ConfigScreenOptions;
+import com.mmodding.mmodding_lib.library.config.ConfigOptions;
+import com.mmodding.mmodding_lib.library.utils.TextureLocation;
 import net.minecraft.text.Text;
 
 public class LightFlorasConfig implements Config {
@@ -32,7 +32,7 @@ public class LightFlorasConfig implements Config {
 	}
 
 	@Override
-	public ConfigScreenOptions getConfigOptions() {
-		return new ConfigScreenOptions(Text.of("Light Floras Config"), new ConfigScreen.BlockTextureLocation("moss_block.png"));
+	public ConfigOptions getConfigOptions() {
+		return new ConfigOptions(Text.of("Light Floras Config"), new TextureLocation.Block("moss_block"));
 	}
 }

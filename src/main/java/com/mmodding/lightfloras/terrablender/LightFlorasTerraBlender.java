@@ -1,8 +1,7 @@
-package fr.firstmegagame4.lightfloras.terrablender;
+package com.mmodding.lightfloras.terrablender;
 
-import fr.firstmegagame4.lightfloras.LightFloras;
+import com.mmodding.lightfloras.LightFloras;
 import terrablender.api.Regions;
-import terrablender.api.SurfaceRuleManager;
 import terrablender.api.TerraBlenderApi;
 
 public class LightFlorasTerraBlender implements TerraBlenderApi {

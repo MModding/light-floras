@@ -1,7 +1,7 @@
-package fr.firstmegagame4.lightfloras.terrablender;
+package com.mmodding.lightfloras.terrablender;
 
+import com.mmodding.lightfloras.LightFlorasGeneration;
 import com.mojang.datafixers.util.Pair;
-import fr.firstmegagame4.lightfloras.LightFlorasGeneration;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;

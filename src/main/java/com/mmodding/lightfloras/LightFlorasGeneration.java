@@ -1,8 +1,8 @@
-package fr.firstmegagame4.lightfloras;
+package com.mmodding.lightfloras;
 
 import com.mmodding.mmodding_lib.library.initializers.ElementsInitializer;
 import com.mmodding.mmodding_lib.library.worldgen.features.defaults.CustomFlowerFeature;
-import fr.firstmegagame4.lightfloras.mixin.OverworldBiomeCreatorAccessor;
+import com.mmodding.lightfloras.mixin.OverworldBiomeCreatorAccessor;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.sound.BiomeMoodSound;
@@ -28,7 +28,7 @@ public class LightFlorasGeneration implements ElementsInitializer {
 	}
 
 	public void features() {
-		if (LightFloras.staticConfig.getBoolean(LightFlorasFlowers.Region.EUROPE.getParameter())) {
+		if (LightFloras.isRegionLoaded(LightFlorasFlowers.Region.EUROPE)) {
 			CustomFlowerFeature lavenderFeature = new CustomFlowerFeature(
 				96,
 				9,

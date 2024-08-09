@@ -1,4 +1,4 @@
-package fr.firstmegagame4.lightfloras.mixin;
+package com.mmodding.lightfloras.mixin;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

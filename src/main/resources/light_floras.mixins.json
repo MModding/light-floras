@@ -4,8 +4,8 @@
   "package": "fr.firstmegagame4.lightfloras.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "OverworldBiomeCreatorAccessor",
-    "PlantBlockMixin"
+    "com.firstmegagame4.lightfloras.mixin.OverworldBiomeCreatorAccessor",
+    "com.firstmegagame4.lightfloras.mixin.PlantBlockMixin"
   ],
   "client": [],
   "injectors": {

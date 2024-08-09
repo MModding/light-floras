@@ -1,4 +1,4 @@
-package fr.firstmegagame4.lightfloras.terrablender;
+package com.mmodding.lightfloras.terrablender;
 
 import net.minecraft.world.gen.surfacebuilder.SurfaceRules;
 
